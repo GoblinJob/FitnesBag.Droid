@@ -22,11 +22,14 @@
         android:id="@+id/fragment_menu"
         android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="0dp"
         app:defaultNavHost="true"
-        app:navGraph="@navigation/main_menu_nav_graph"
-        tools:layout_editor_absoluteX="178dp"
-        tools:layout_editor_absoluteY="261dp" />
+        app:layout_constraintBottom_toTopOf="@+id/navigation_menu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/main_menu_nav_graph" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
