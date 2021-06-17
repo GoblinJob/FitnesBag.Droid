@@ -7,22 +7,10 @@
     android:icon="@drawable/ic_home">
     </item>
     <item
-        android:title="Recommend"
-        android:id="@+id/recommend"
+        android:title="Calendar"
+        android:id="@+id/calendar"
         android:enabled="true"
-        android:icon="@drawable/ic_recomend">
-    </item>
-    <item
-        android:title=""
-        android:id="@+id/add_menu"
-        android:enabled="true"
-        android:icon="@drawable/ic_add">
-    </item>
-    <item
-        android:title="Explorer"
-        android:id="@+id/explorer"
-        android:enabled="true"
-        android:icon="@drawable/ic_explorer">
+        android:icon="@drawable/ic_calendar">
     </item>
     <item
         android:title="Extra"

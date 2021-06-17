@@ -16,7 +16,6 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 class MainMenuFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflater.inflate(R.layout.fragment_main_menu, container, false)
-
         val menu = view.findViewById<BottomNavigationView>(R.id.navigation_menu)
         val navHostFragment = childFragmentManager.findFragmentById(R.id.fragment_menu) as NavHostFragment
         val navController = navHostFragment.navController
@@ -24,17 +23,12 @@ class MainMenuFragment : Fragment() {
         menu.setOnNavigationItemSelectedListener {item ->
             navController.popBackStack()
             when(item.itemId) {
-                R.id.recommend -> {
-                    navController.navigate(R.id.recommendFragment)
-                }
                 R.id.home_menu -> {
                     navController?.navigate(R.id.homeFragment2)
                 }
-                R.id.add_menu -> {
-                    navController?.navigate(R.id.addFragment)
-                }
-                R.id.explorer -> {
-                    navController?.navigate(R.id.explorerFragment)
+                R.id.calendar-> {
+                    navController?.navigate(R.id.recommendFragment)
+                    true
                 }
                 R.id.extra -> {
                     navController?.navigate(R.id.extraFragment)

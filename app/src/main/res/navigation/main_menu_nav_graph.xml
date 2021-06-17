@@ -11,22 +11,12 @@
         tools:layout="@layout/fragment_home" />
     <fragment
         android:id="@+id/recommendFragment"
-        android:name="com.example.fitnesbag.view.fragments.RecommendFragment"
+        android:name="com.example.fitnesbag.view.fragments.CalendarFragment"
         android:label="fragment_recommend"
-        tools:layout="@layout/fragment_recommend" />
+        tools:layout="@layout/fragment_calendar" />
     <fragment
         android:id="@+id/extraFragment"
         android:name="com.example.fitnesbag.view.fragments.ExtraFragment"
         android:label="fragment_extra"
         tools:layout="@layout/fragment_extra" />
-    <fragment
-        android:id="@+id/explorerFragment"
-        android:name="com.example.fitnesbag.view.fragments.ExplorerFragment"
-        android:label="fragment_explorer"
-        tools:layout="@layout/fragment_explorer" />
-    <fragment
-        android:id="@+id/addFragment"
-        android:name="com.example.fitnesbag.view.fragments.AddFragment"
-        android:label="fragment_add"
-        tools:layout="@layout/fragment_add" />
 </navigation>

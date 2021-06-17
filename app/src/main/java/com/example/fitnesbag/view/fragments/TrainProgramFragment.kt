@@ -7,10 +7,8 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.fitnesbag.R
 
-class ExplorerFragment : Fragment() {
-
+class TrainProgramFragment : Fragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_explorer, container, false)
+        return inflater.inflate(R.layout.fragment_train_program, container, false)
     }
-
 }
