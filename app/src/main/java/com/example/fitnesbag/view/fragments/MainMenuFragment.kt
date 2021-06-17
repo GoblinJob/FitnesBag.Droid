@@ -20,30 +20,27 @@ class MainMenuFragment : Fragment() {
         val menu = view.findViewById<BottomNavigationView>(R.id.navigation_menu)
         val navHostFragment = childFragmentManager.findFragmentById(R.id.fragment_menu) as NavHostFragment
         val navController = navHostFragment.navController
+
         menu.setOnNavigationItemSelectedListener {item ->
+            navController.popBackStack()
             when(item.itemId) {
                 R.id.recommend -> {
-                    navController?.navigate(R.id.recommendFragment)
-                    true
+                    navController.navigate(R.id.recommendFragment)
                 }
                 R.id.home_menu -> {
                     navController?.navigate(R.id.homeFragment2)
-                    true
                 }
                 R.id.add_menu -> {
                     navController?.navigate(R.id.addFragment)
-                    true
                 }
                 R.id.explorer -> {
                     navController?.navigate(R.id.explorerFragment)
-                    true
                 }
                 R.id.extra -> {
                     navController?.navigate(R.id.extraFragment)
-                    true
                 }
-                else -> false
             }
+            true
         }
 
         return view
