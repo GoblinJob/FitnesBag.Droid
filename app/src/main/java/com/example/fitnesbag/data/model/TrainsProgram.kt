@@ -5,4 +5,5 @@ interface TrainsProgram {
     var name: String
     var description: String
     var imagePath: String
+    var list: List<TrainInTrainsProgram>
 }
