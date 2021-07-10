@@ -1,9 +1,13 @@
 package com.example.fitnesbag.data.model
 
-interface TrainsProgram {
-    val id: Int
-    var name: String
-    var description: String
-    var imagePath: String
-    var list: List<TrainInTrainsProgram>
-}
+import androidx.room.Entity
+import androidx.room.PrimaryKey
+
+@Entity
+data class TrainsProgram(
+        @PrimaryKey(autoGenerate = true)
+        val id: Int,
+        var name: String,
+        var description: String,
+        var imagePath: String
+)
