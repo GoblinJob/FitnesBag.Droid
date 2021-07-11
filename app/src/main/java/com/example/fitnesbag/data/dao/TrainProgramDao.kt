@@ -1,11 +1,11 @@
-package com.example.fitnesbag.data.repository
+package com.example.fitnesbag.data.dao
 
 import androidx.room.*
 import com.example.fitnesbag.data.model.TrainsProgram
 
 
 @Dao
-interface TrainProgramRepository {
+interface TrainProgramDao {
     @Query("SELECT * FROM trainsProgram")
     fun getAll(): List<TrainsProgram?>?
 

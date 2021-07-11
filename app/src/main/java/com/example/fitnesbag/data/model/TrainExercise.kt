@@ -21,5 +21,6 @@ data class TrainExercise(
         val id: Int,
         val trainId: Int,
         var exerciseId: Int,
+        var exerciseNumber: Int,
         var restSeconds: Int
 )

@@ -16,8 +16,8 @@ android {
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
-    dataBinding {
-        enabled = true
+    buildFeatures {
+        dataBinding true
     }
     buildTypes {
         release {
@@ -31,6 +31,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = '1.8'
+    }
+    kapt {
+        generateStubs = true
     }
 }
 
@@ -64,10 +67,10 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-reactivestreams-ktx:2.3.1"
     implementation "com.google.dagger:dagger:2.26"
     kapt "com.google.dagger:dagger-compiler:2.26"
+
+    def room_version = "2.3.0"
     implementation("androidx.room:room-runtime:$room_version")
     annotationProcessor "androidx.room:room-compiler:$room_version"
     // To use Kotlin annotation processing tool (kapt)
     kapt("androidx.room:room-compiler:$room_version")
-    // To use Kotlin Symbolic Processing (KSP)
-    ksp("androidx.room:room-compiler:$room_version")
 }

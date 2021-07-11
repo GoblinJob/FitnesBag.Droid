@@ -1,4 +1,4 @@
-package com.example.fitnesbag.adapter
+package com.example.fitnesbag.view.adapters
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager

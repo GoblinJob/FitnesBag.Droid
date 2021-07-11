@@ -3,6 +3,7 @@ package com.example.fitnesbag.data.model
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.PrimaryKey
+import java.util.function.BinaryOperator
 
 @Entity(foreignKeys = arrayOf(
         ForeignKey(
@@ -21,5 +22,6 @@ data class TrainInTrainsProgram(
         val id: Int,
         val trainId: Int,
         var trainProgramId: Int,
-        val hoursToNextTrain: Int
+        var trainNumber: Int,
+        var hoursToNextTrain: Int
 )

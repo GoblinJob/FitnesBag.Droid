@@ -6,14 +6,23 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.viewpager.widget.ViewPager
+import com.example.fitnesbag.App
 import com.example.fitnesbag.R
-import com.example.fitnesbag.adapter.AdapterHomeFragment
+import com.example.fitnesbag.data.dao.TrainProgramDao
+import com.example.fitnesbag.view.adapters.AdapterHomeFragment
 import com.google.android.material.tabs.TabLayout
+import kotlinx.coroutines.coroutineScope
+import javax.inject.Inject
 import kotlin.math.abs
 
 class HomeFragment : Fragment() {
 
+    @Inject lateinit var trainProgramDao: TrainProgramDao
+    
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+        App.instance.appComponent.inject(this)
+        val test = trainProgramDao.getAll()
+        
         val view = inflater.inflate(R.layout.fragment_home, container, false)
         val adapter = AdapterHomeFragment(childFragmentManager)
         val viewPager = view?.findViewById<ViewPager>(R.id.view_pager)

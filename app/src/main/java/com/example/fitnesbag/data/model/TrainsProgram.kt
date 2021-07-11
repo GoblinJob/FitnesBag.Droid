@@ -9,5 +9,8 @@ data class TrainsProgram(
         val id: Int,
         var name: String,
         var description: String,
-        var imagePath: String
+        var imagePath: String,
+        var isDone: Boolean,
+        var isDoing: Boolean,
+        var trainsDoneCount: Int
 )
